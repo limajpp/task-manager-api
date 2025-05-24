@@ -27,7 +27,7 @@ userSchema.pre("save", async function (next) {
     this.password = await hashPassword(this.password);
     next();
   } catch (error) {
-    console.error(`Failed to hash given password, ${error.messsage}`);
+    console.error(`Failed to hash given password, ${error.message}`);
     next(error);
   }
 });
